@@ -1,3 +1,7 @@
+"use strict";
+
+const strict = require("assert/strict");
+
 // Inside src/models/Product.ts, create a Product base class with the following:
 // Properties: sku (string), name (string), price (number).
 // Methods:
@@ -6,21 +10,7 @@
 // Create the PhysicalProduct Subclass:
 
 class Product {
-    sku:number;
-    name:string;
-    price:number;
-
-    constructor(sku:number, name:string, price:number){
-        this.sku=sku,
-        this.name=name,
-        this.price=price
-    }
-
-        displayDetails():string {
-            return `Is Product details`
-        }
-         getPriceWithTax():number {
-            return this.price +(1 * this.sku)
-         }
-
+   constructor(sku, name, price) {
+    this.sku=sku
+   }
 }
