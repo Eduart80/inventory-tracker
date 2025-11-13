@@ -5,14 +5,16 @@
 // Use a getter method to return the formatted weight in kilograms (e.g. “2.5 kg”).
 // Create the DigitalProduct Subclass:
 class PhysicalProduct extends Product {
-    weight:number
-    constructor(sku:number, name:string, price:number, weight:number){
-        super(sku,name,price),
-        this.weight=weight
+    // weight:number
+    constructor(sku:number, name:string, price:number){
+        super(sku,name,price)
+        // this.weight=weight
     }
 
-    // getPriceWithTax(){
-
+    // getPriceWithTax():string{
+    //     return 'getPrice with tax'
     // }
-
+    
 }
+
+export {PhysicalProduct}
