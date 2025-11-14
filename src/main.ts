@@ -7,10 +7,12 @@ import {PhysicalProduct} from './models/PhysicalProduct'
 import {DigitalProduct} from './models/DigitalProduct'
 import {calculateTax} from './utils/taxCalculator'
 
+let products =[ 
+new PhysicalProduct(21, 'Magnet',12),
 
-new PhysicalProduct(21, 'Magnet',12)
-new DigitalProduct
+new DigitalProduct(12, 'Moon Light', 23)
+]
 
-for(let product of PhysicalProduct){
+for(let product of products){
     console.log(product)
 }

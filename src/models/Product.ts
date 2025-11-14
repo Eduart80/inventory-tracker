@@ -5,12 +5,12 @@
 // getPriceWithTax() - a method that calculates the final price of the product with tax.
 // Create the PhysicalProduct Subclass:
 
-class Product {
-    sku:number;
+export class Product {
+    sku:string;
     name:string;
     price:number;
 
-    constructor(sku:number, name:string, price:number){
+    constructor(sku:string, name:string, price:number){
         this.sku=sku,
         this.name=name,
         this.price=price
@@ -20,7 +20,7 @@ class Product {
             return `Is Product details`
         }
          getPriceWithTax():number {
-            return this.price +(1 * this.sku)
+            return this.price +(1 * 2)
          }
 
 }
