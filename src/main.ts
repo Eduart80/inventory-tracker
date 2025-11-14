@@ -1,18 +1,25 @@
 
-// Inside src/main.ts, import the PhysicalProduct and DigitalProduct classes, and create instances of both.
-// Use a loop to display the details of each product, calculate prices with tax, and display the final prices.
-// Hint: Utilize polymorphism to your advantage here.
-// Compile and Run the Program:
 import {PhysicalProduct} from './models/PhysicalProduct'
 import {DigitalProduct} from './models/DigitalProduct'
 import {calculateTax} from './utils/taxCalculator'
 
 let products =[ 
-new PhysicalProduct(21, 'Magnet',12),
+new PhysicalProduct('Flash drive', 'DELL',32,25),
 
-new DigitalProduct(12, 'Moon Light', 23)
+new DigitalProduct( 'E-Book', 'Moon Light',29,15)
 ]
 
 for(let product of products){
-    console.log(product)
+    // console.log(product.displayDetails())
+    // console.log(product.getPriceWithTax())
+    // console.log('Price with Tax:', `$${calculateTax(product).toFixed(2)}`);
+ console.log(product.displayDetails());
+    if (product instanceof PhysicalProduct) {
+        console.log('Weight:', product.productWeight);
+    } else if (product instanceof DigitalProduct) {
+        console.log('File Size:', product.price);
+    }
+    console.log('Price with Tax:', `$${calculateTax(product).toFixed(2)}`);
+    console.log('---');
+
 }
